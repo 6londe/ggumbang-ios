@@ -40,7 +40,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="requestedItem" destination="dIj-ei-iZj" id="MIs-rw-IZ3"/>
+                                            <outlet property="requestedItemLabel" destination="dIj-ei-iZj" id="MIs-rw-IZ3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -57,6 +57,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0Q-cG-mzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1218.840579710145" y="-251.11607142857142"/>
+        </scene>
+        <!--Received View Controller-->
+        <scene sceneID="37W-VZ-sDQ">
+            <objects>
+                <viewController restorationIdentifier="ReceivedViewController" storyboardIdentifier="ReceivedViewController" id="Sfa-85-UPf" customClass="ReceivedViewController" customModule="ggumbang_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="ReceivedViewController" id="5HA-qC-9NP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqt-hb-mex">
+                                <rect key="frame" x="40" y="125" width="335" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXl-2W-xf0">
+                                <rect key="frame" x="61" y="87" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonTouchUpInside:" destination="Sfa-85-UPf" eventType="touchUpInside" id="g6R-fc-JTE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pRw-oM-H5g"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="qXl-2W-xf0" id="dBD-f0-xUR"/>
+                        <outlet property="requestedInfoLabel" destination="pqt-hb-mex" id="ZbZ-8P-gYN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1L-P5-0co" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446.37681159420293" y="-251.11607142857142"/>
         </scene>
         <!--Home-->
         <scene sceneID="iPt-tC-Pe2">
@@ -100,11 +136,20 @@
                                     <action selector="startButtonTouchUpInside:" destination="p8h-eS-gdr" eventType="touchUpInside" id="67W-MO-yC2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbR-LU-Fop">
+                                <rect key="frame" x="55" y="90" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonTouchUpInside:" destination="p8h-eS-gdr" eventType="touchUpInside" id="gU6-m8-9I9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Yba-xj-UaJ"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="fbR-LU-Fop" id="KbC-9N-LnS"/>
                         <outlet property="startButton" destination="ZOH-Dg-P82" id="Zru-aA-gPS"/>
                     </connections>
                 </viewController>

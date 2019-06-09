@@ -10,7 +10,7 @@ import UIKit
 
 class RequestedTableViewCell: UITableViewCell {
 
-    @IBOutlet var requestedItem: UILabel!
+    @IBOutlet var requestedItemLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

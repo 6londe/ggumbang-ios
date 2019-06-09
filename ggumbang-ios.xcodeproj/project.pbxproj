@@ -20,6 +20,7 @@
 		FC865A3222AB92B3000F6160 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC865A3122AB92B3000F6160 /* Http.swift */; };
 		FC865A3422AC1310000F6160 /* StartRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC865A3322AC1310000F6160 /* StartRequestViewController.swift */; };
 		FC865A3622AC149E000F6160 /* QuestionaireData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC865A3522AC149E000F6160 /* QuestionaireData.swift */; };
+		FC865A3822ACB113000F6160 /* ReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC865A3722ACB113000F6160 /* ReceivedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		FC865A3122AB92B3000F6160 /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 		FC865A3322AC1310000F6160 /* StartRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRequestViewController.swift; sourceTree = "<group>"; };
 		FC865A3522AC149E000F6160 /* QuestionaireData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionaireData.swift; sourceTree = "<group>"; };
+		FC865A3722ACB113000F6160 /* ReceivedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				FC865A2F22AB925D000F6160 /* Config.swift */,
 				FC865A3122AB92B3000F6160 /* Http.swift */,
 				FC865A3522AC149E000F6160 /* QuestionaireData.swift */,
+				FC865A3722ACB113000F6160 /* ReceivedViewController.swift */,
 			);
 			path = "ggumbang-ios";
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				FC865A3622AC149E000F6160 /* QuestionaireData.swift in Sources */,
 				FC865A2A22AB90E8000F6160 /* RequestedViewController.swift in Sources */,
 				FC865A2E22AB9204000F6160 /* RequestedData.swift in Sources */,
+				FC865A3822ACB113000F6160 /* ReceivedViewController.swift in Sources */,
 				FC865A3222AB92B3000F6160 /* Http.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

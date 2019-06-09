@@ -11,6 +11,7 @@ import UIKit
 class StartRequestViewController: UIViewController {
 
     @IBOutlet var startButton: UIButton!
+    @IBOutlet var backButton: UIButton!
     
     // TODO get this typeId from previous ViewController
     var typeId = "2"
@@ -31,5 +32,17 @@ class StartRequestViewController: UIViewController {
     
     @IBAction func startButtonTouchUpInside(_ sender: UIButton) {
         print(self.questionaire.question)
+    }
+    
+    @IBAction func backButtonTouchUpInside(_ sender: UIButton) {
+        performSegueToReturnBack()
+    }
+    
+    func performSegueToReturnBack()  {
+        if let nav = self.navigationController {
+            nav.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }

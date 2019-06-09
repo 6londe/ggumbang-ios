@@ -15,6 +15,7 @@ class RequestedViewController: UIViewController {
     let cellIdentifier = "TableViewCell"
     
     @IBOutlet weak var tableView: UITableView!
+    
     var http = Http(baseUrl: Config.baseUrl)
     var tableData: [Requested] = []
     
@@ -46,9 +47,16 @@ extension RequestedViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RequestedTableViewCell
-        print(self.tableData[indexPath.row].comment)
-        cell.requestedItem?.text = self.tableData[indexPath.row].comment
+        cell.requestedItemLabel?.text = self.tableData[indexPath.row].comment
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            let receivedViewController = self.storyboard?.instantiateViewController(withIdentifier: "ReceivedViewController") as! ReceivedViewController
+            receivedViewController.requestedInfo = self.tableData[indexPath.row]
+            self.present(receivedViewController, animated: true)
+        }
     }
 }
 
