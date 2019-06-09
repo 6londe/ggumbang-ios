@@ -47,7 +47,11 @@ extension RequestedViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RequestedTableViewCell
-        cell.requestedItemLabel?.text = self.tableData[indexPath.row].comment
+        
+        do {
+            let jsonData = try JSONEncoder().encode(self.tableData[indexPath.row])
+            cell.requestedItemLabel?.text = String(data: jsonData, encoding: .utf8)
+        } catch { cell.requestedItemLabel?.text = "No Data" }
         return cell
     }
     

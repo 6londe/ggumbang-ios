@@ -21,6 +21,7 @@
 		FC865A3422AC1310000F6160 /* StartRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC865A3322AC1310000F6160 /* StartRequestViewController.swift */; };
 		FC865A3622AC149E000F6160 /* QuestionaireData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC865A3522AC149E000F6160 /* QuestionaireData.swift */; };
 		FC865A3822ACB113000F6160 /* ReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC865A3722ACB113000F6160 /* ReceivedViewController.swift */; };
+		FC865A3C22ACCF8E000F6160 /* RadioSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC865A3B22ACCF8E000F6160 /* RadioSurveyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		FC865A3322AC1310000F6160 /* StartRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRequestViewController.swift; sourceTree = "<group>"; };
 		FC865A3522AC149E000F6160 /* QuestionaireData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionaireData.swift; sourceTree = "<group>"; };
 		FC865A3722ACB113000F6160 /* ReceivedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedViewController.swift; sourceTree = "<group>"; };
+		FC865A3B22ACCF8E000F6160 /* RadioSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSurveyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				FC865A3122AB92B3000F6160 /* Http.swift */,
 				FC865A3522AC149E000F6160 /* QuestionaireData.swift */,
 				FC865A3722ACB113000F6160 /* ReceivedViewController.swift */,
+				FC865A3B22ACCF8E000F6160 /* RadioSurveyViewController.swift */,
 			);
 			path = "ggumbang-ios";
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				FC865A2C22AB919D000F6160 /* RequestedTableViewCell.swift in Sources */,
 				FC865A3422AC1310000F6160 /* StartRequestViewController.swift in Sources */,
 				FC865A3022AB925D000F6160 /* Config.swift in Sources */,
+				FC865A3C22ACCF8E000F6160 /* RadioSurveyViewController.swift in Sources */,
 				FC865A3622AC149E000F6160 /* QuestionaireData.swift in Sources */,
 				FC865A2A22AB90E8000F6160 /* RequestedViewController.swift in Sources */,
 				FC865A2E22AB9204000F6160 /* RequestedData.swift in Sources */,

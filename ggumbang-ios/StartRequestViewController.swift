@@ -31,7 +31,22 @@ class StartRequestViewController: UIViewController {
     }
     
     @IBAction func startButtonTouchUpInside(_ sender: UIButton) {
-        print(self.questionaire.question)
+        let questions = questionaire.question
+        if questions.count == 0 {
+            // TODO go to comment survey view controller
+        }
+        else if questions[0].type == "radio" {
+            DispatchQueue.main.async {
+                let radioSurveyViewController = self.storyboard?.instantiateViewController(withIdentifier: "RadioSurveyViewController") as! RadioSurveyViewController
+                radioSurveyViewController.questionaireData = self.questionaire
+                radioSurveyViewController.questionIndex = 0
+                self.present(radioSurveyViewController, animated: true)
+            }
+        }
+        else if questions[0].type == "checkbox" {
+            // TODO go to checkbox survey view controller
+        }
+        
     }
     
     @IBAction func backButtonTouchUpInside(_ sender: UIButton) {
