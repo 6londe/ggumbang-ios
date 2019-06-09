@@ -15,6 +15,7 @@ class StartRequestViewController: UIViewController {
     
     // TODO get this typeId from previous ViewController
     var typeId = "2"
+    
     var http = Http(baseUrl: Config.baseUrl)
     var questionaire: QuestionaireData!
 
@@ -33,20 +34,26 @@ class StartRequestViewController: UIViewController {
     @IBAction func startButtonTouchUpInside(_ sender: UIButton) {
         let questions = questionaire.question
         if questions.count == 0 {
-            // TODO go to comment survey view controller
+            DispatchQueue.main.async {
+                let commentSurveyViewController = self.storyboard?.instantiateViewController(withIdentifier: "CommentSurveyViewController") as! CommentSurveyViewController
+                commentSurveyViewController.modalTransitionStyle = UIModalTransitionStyle.partialCurl
+                // TODO send user answers data
+                self.present(commentSurveyViewController, animated: true)
+            }
         }
         else if questions[0].type == "radio" {
             DispatchQueue.main.async {
                 let radioSurveyViewController = self.storyboard?.instantiateViewController(withIdentifier: "RadioSurveyViewController") as! RadioSurveyViewController
                 radioSurveyViewController.questionaireData = self.questionaire
                 radioSurveyViewController.questionIndex = 0
+                radioSurveyViewController.modalTransitionStyle = UIModalTransitionStyle.partialCurl
+                // TODO send user answers data
                 self.present(radioSurveyViewController, animated: true)
             }
         }
         else if questions[0].type == "checkbox" {
             // TODO go to checkbox survey view controller
         }
-        
     }
     
     @IBAction func backButtonTouchUpInside(_ sender: UIButton) {

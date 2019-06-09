@@ -110,6 +110,16 @@
                                     <segue destination="p8h-eS-gdr" kind="show" id="Mn5-2d-Eqg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCJ-EZ-Yal">
+                                <rect key="frame" x="262" y="594" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Type 3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4H-fM-2cj">
+                                <rect key="frame" x="107" y="594" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Type 1"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ACo-md-jkz"/>
@@ -218,7 +228,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3E0-v8-3Zi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308.69565217391306" y="-899.33035714285711"/>
+            <point key="canvasLocation" x="-1219" y="-1553"/>
+        </scene>
+        <!--Comment Survey View Controller-->
+        <scene sceneID="WA6-ya-IAP">
+            <objects>
+                <viewController restorationIdentifier="CommentSurveyViewController" storyboardIdentifier="CommentSurveyViewController" id="9u7-0X-BRT" customClass="CommentSurveyViewController" customModule="ggumbang_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MAT-qN-zuS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sq2-w2-Pux">
+                                <rect key="frame" x="329" y="59" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="x button"/>
+                                <connections>
+                                    <segue destination="FkA-W6-1Xk" kind="show" id="5AA-fc-0lN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="요청사항을 적어주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2o-LV-peJ">
+                                <rect key="frame" x="27" y="250" width="359" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qcx-9W-awl">
+                                <rect key="frame" x="59" y="392" width="296" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xV8-RZ-7jI">
+                                <rect key="frame" x="179" y="712" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Request"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="m4f-wB-2bl"/>
+                    </view>
+                    <connections>
+                        <outlet property="requestButton" destination="xV8-RZ-7jI" id="Evb-iy-OBW"/>
+                        <outlet property="xButton" destination="sq2-w2-Pux" id="Cbe-iM-zIx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xYK-km-nqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446.37681159420293" y="-1553.5714285714284"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GO4-Wh-N6f">
@@ -273,4 +331,7 @@
             <point key="canvasLocation" x="-1925" y="201"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5AA-fc-0lN"/>
+    </inferredMetricsTieBreakers>
 </document>

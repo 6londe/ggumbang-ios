@@ -11,10 +11,10 @@ import UIKit
 class RadioSurveyViewController: UIViewController {
 
     @IBOutlet var xButton: UIButton!
-    @IBOutlet var questionLabel: UILabel!
     @IBOutlet var nextButton: UIButton!
+    @IBOutlet var questionLabel: UILabel!
     
-    // TODO generate this buttons dynamically
+    // TODO generate these buttons dynamically
     @IBOutlet var radioButton1: UIButton!
     @IBOutlet var radioButton2: UIButton!
     @IBOutlet var radioButton3: UIButton!
@@ -35,13 +35,20 @@ class RadioSurveyViewController: UIViewController {
         let questions = self.questionaireData.question
         let nextIndex = self.questionIndex + 1
         if questions.count == nextIndex {
-            // TODO go to comment survey view controller
+            DispatchQueue.main.async {
+                let commentSurveyViewController = self.storyboard?.instantiateViewController(withIdentifier: "CommentSurveyViewController") as! CommentSurveyViewController
+                commentSurveyViewController.modalTransitionStyle = UIModalTransitionStyle.partialCurl
+                // TODO send user answers data
+                self.present(commentSurveyViewController, animated: true)
+            }
         }
         else if questions[nextIndex].type == "radio" {
             DispatchQueue.main.async {
                 let radioSurveyViewController = self.storyboard?.instantiateViewController(withIdentifier: "RadioSurveyViewController") as! RadioSurveyViewController
                 radioSurveyViewController.questionaireData = self.questionaireData
                 radioSurveyViewController.questionIndex = nextIndex
+                radioSurveyViewController.modalTransitionStyle = UIModalTransitionStyle.partialCurl
+                // TODO send user answers data
                 self.present(radioSurveyViewController, animated: true)
             }
         }

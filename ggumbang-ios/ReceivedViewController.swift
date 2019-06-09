@@ -1,5 +1,5 @@
 //
-//  RequestedDetailViewController.swift
+//  ReceivedViewController.swift
 //  ggumbang-ios
 //
 //  Created by Changhoon Lee on 09/06/2019.

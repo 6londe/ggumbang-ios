@@ -1,5 +1,5 @@
 //
-//  RequestData.swift
+//  RequestedData.swift
 //  ggumbang-ios
 //
 //  Created by Changhoon Lee on 28/05/2019.
